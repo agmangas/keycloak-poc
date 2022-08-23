@@ -1,0 +1,8 @@
+namespace: default
+resources:
+  - keycloak.yml
+  - keycloak-config.yml
+secretGenerator:
+  - name: keycloak-secret
+    envs:
+      - secrets.env
