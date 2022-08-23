@@ -231,10 +231,9 @@ postgresql:
 externalDatabase:
   host: postgres
   port: 5432
-  user: bn_keycloak
-  database: bitnami_keycloak
+  user: postgres
+  database: keycloak_poc
   existingSecret: pgsecret
-  # password: password
 
 ## @section Keycloak Logging parameters
 

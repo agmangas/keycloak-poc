@@ -10,9 +10,9 @@ services:
     ports:
       - "5432:5432"
     environment:
-      POSTGRES_USER: bn_keycloak
+      POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
-      POSTGRES_DB: bitnami_keycloak
+      POSTGRES_DB: keycloak_poc
     healthcheck:
       test: [ "CMD", "pg_isready", "-U", "postgres" ]
       interval: 30s
