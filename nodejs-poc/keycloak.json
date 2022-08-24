@@ -1,0 +1,10 @@
+{
+  "realm": "poc-realm",
+  "auth-server-url": "http://localhost:8080/",
+  "ssl-required": "external",
+  "resource": "poc-client-default",
+  "credentials": {
+    "secret": "E8zLtm1XfMqzON9EYLF6X93VuxhO3xKi"
+  },
+  "confidential-port": 0
+}

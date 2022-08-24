@@ -12,9 +12,8 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
-      POSTGRES_DB: keycloak_poc
     healthcheck:
-      test: [ "CMD", "pg_isready", "-U", "postgres" ]
+      test: ["CMD", "pg_isready", "-U", "postgres"]
       interval: 30s
       timeout: 30s
       retries: 3
@@ -23,5 +22,8 @@ services:
       - type: volume
         source: postgres_data
         target: /var/lib/postgresql/data
+      - type: bind
+        source: ./keycloak_poc.sql
+        target: /docker-entrypoint-initdb.d/init.sql
 volumes:
   postgres_data:
