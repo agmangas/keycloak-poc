@@ -38,17 +38,21 @@ app.get("/api/public", function (_req, res) {
   res.json({ message: "public" });
 });
 
+const CLIENT_NAME = "poc-client-default";
+const CLIENT_ROLE = "custom_client_role";
+const REALM_ROLE = "the_group_role";
+
 app.get(
   "/api/protected",
   keycloak.protect((token) => {
     console.log("token.content", token.content);
 
     return (
-      token.hasApplicationRole("poc-client-default", "custom_client_role") &&
-      token.hasRealmRole("the_group_role") &&
-      token.hasRole("poc-client-default:custom_client_role") &&
-      token.hasRole("custom_client_role") &&
-      token.hasRole("realm:the_group_role")
+      token.hasApplicationRole(CLIENT_NAME, CLIENT_ROLE) &&
+      token.hasRealmRole(REALM_ROLE) &&
+      token.hasRole(`${CLIENT_NAME}:${CLIENT_ROLE}`) &&
+      token.hasRole(CLIENT_ROLE) &&
+      token.hasRole(`realm:${REALM_ROLE}`)
     );
   }),
   function (req, res) {

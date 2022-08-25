@@ -2060,7 +2060,6 @@ ccc5f1fb-18d6-4900-b856-79e9fc757948	Full Scope Disabled	ba1a6f7d-badd-4ac5-9ce3
 4239209e-fb23-4097-b2c0-b35222f008de	Allowed Client Scopes	ba1a6f7d-badd-4ac5-9ce3-3a5dc0dd1d0b	allowed-client-templates	org.keycloak.services.clientregistration.policy.ClientRegistrationPolicy	ba1a6f7d-badd-4ac5-9ce3-3a5dc0dd1d0b	anonymous
 433a9b53-56cf-407f-a0b5-8bd31ead0b7b	Allowed Protocol Mapper Types	ba1a6f7d-badd-4ac5-9ce3-3a5dc0dd1d0b	allowed-protocol-mappers	org.keycloak.services.clientregistration.policy.ClientRegistrationPolicy	ba1a6f7d-badd-4ac5-9ce3-3a5dc0dd1d0b	authenticated
 b6406d78-f39b-4e1a-8e32-8bd929993fe0	Allowed Client Scopes	ba1a6f7d-badd-4ac5-9ce3-3a5dc0dd1d0b	allowed-client-templates	org.keycloak.services.clientregistration.policy.ClientRegistrationPolicy	ba1a6f7d-badd-4ac5-9ce3-3a5dc0dd1d0b	authenticated
-012bb18f-bc8a-4c5a-b6d3-d55c520568fa	\N	ba1a6f7d-badd-4ac5-9ce3-3a5dc0dd1d0b	declarative-user-profile	org.keycloak.userprofile.UserProfileProvider	ba1a6f7d-badd-4ac5-9ce3-3a5dc0dd1d0b	\N
 \.
 
 
@@ -2236,7 +2235,7 @@ e8eb2cf0-e9ff-4e80-ae1f-3dca2cd64a9c	c4252ac9-3bc6-4413-8d73-3411a0d803a8
 
 COPY public.credential (id, salt, type, user_id, created_date, user_label, secret_data, credential_data, priority) FROM stdin;
 a8cec6f0-78ec-41f9-aa5a-147a748da2a9	\N	password	733a0f8d-e2ac-4ef7-bfa4-0a017f3e73b1	1661337657240	\N	{"value":"2sGZ2FUsN2ldXiurOZC/V0tSSPgxVNgZkirqya7PJd0jT6PWO8SvyZGX2BlqTZs08PHTJc0TOsx0oaSt9Z9bYw==","salt":"U0/oBdsY+RtjhL2Hi/sdGA==","additionalParameters":{}}	{"hashIterations":27500,"algorithm":"pbkdf2-sha256","additionalParameters":{}}	10
-237774b2-7f24-4d10-9f73-4fb98968b68f	\N	password	215dbd9f-19e6-446b-ae84-226fc1942282	1661337866448	\N	{"value":"6fK6qUUEC7Mg0nBdZigvYFIE+iCmUoqaQGpLX+VVUuxHfufO+COvwY2Ct+Ursi+konDfd3BgsLt5pBSbSztlWw==","salt":"wo567abYEooTBMG3iuGI8A==","additionalParameters":{}}	{"hashIterations":27500,"algorithm":"pbkdf2-sha256","additionalParameters":{}}	10
+c57a5453-0282-4863-a6d8-f21142398457	\N	password	328856d8-af88-4b67-979d-852ef2ab00f3	1661421201105	My password	{"value":"Uxyu3S5vR5DPFP0phDBNPkl46pyyjSmYts3UnwGuGQAX8jk8Zws8VBHTTBfuWq2OLhtgB89AbKILpbUaNvNdLg==","salt":"jRhB3jFYBu/dv/i/SkyU8A==","additionalParameters":{}}	{"hashIterations":27500,"algorithm":"pbkdf2-sha256","additionalParameters":{}}	10
 \.
 
 
@@ -3037,8 +3036,8 @@ aa8a22d3-b8ec-4bd5-a83b-48ba777299d7	String	jsonType.label
 --
 
 COPY public.realm (id, access_code_lifespan, user_action_lifespan, access_token_lifespan, account_theme, admin_theme, email_theme, enabled, events_enabled, events_expiration, login_theme, name, not_before, password_policy, registration_allowed, remember_me, reset_password_allowed, social, ssl_required, sso_idle_timeout, sso_max_lifespan, update_profile_on_soc_login, verify_email, master_admin_client, login_lifespan, internationalization_enabled, default_locale, reg_email_as_username, admin_events_enabled, admin_events_details_enabled, edit_username_allowed, otp_policy_counter, otp_policy_window, otp_policy_period, otp_policy_digits, otp_policy_alg, otp_policy_type, browser_flow, registration_flow, direct_grant_flow, reset_credentials_flow, client_auth_flow, offline_session_idle_timeout, revoke_refresh_token, access_token_life_implicit, login_with_email_allowed, duplicate_emails_allowed, docker_auth_flow, refresh_token_max_reuse, allow_user_managed_access, sso_max_lifespan_remember_me, sso_idle_timeout_remember_me, default_role) FROM stdin;
-ba1a6f7d-badd-4ac5-9ce3-3a5dc0dd1d0b	60	300	300	\N	\N	\N	t	f	0	\N	poc-realm	0	\N	t	t	t	f	EXTERNAL	1800	36000	f	f	d3a1c55d-68b9-41f2-ad98-a8bcb669d6aa	1800	f	\N	f	f	f	f	0	1	30	6	HmacSHA1	totp	e3c72776-738f-4a50-8b65-15737aeb31cd	8b44a050-5ec9-4e52-b6a3-89fd59bdeb91	00f7b56a-1e4b-445a-a424-b7706190f506	fcb6b793-200e-492a-a09b-f3ea026f3a6a	903d0900-b5b6-4055-8075-957d04292a1b	2592000	f	900	t	f	e3935ad1-5899-48a5-be90-c4956388f55e	0	f	0	0	e8eb2cf0-e9ff-4e80-ae1f-3dca2cd64a9c
 d86ec37e-5c02-4219-bb0d-99cb545457ff	60	300	60	\N	\N	\N	t	f	0	\N	master	0	\N	f	f	f	f	EXTERNAL	1800	36000	f	f	5debe463-9857-47f1-8f77-552084601bcb	1800	f	\N	f	f	f	f	0	1	30	6	HmacSHA1	totp	53d7b7d6-2888-4ee8-8819-2f54318a7cf3	e624c028-7185-4249-921c-fc1ab3a68189	e8462dba-6e4f-4785-8ffb-002f86b7c0f5	fbd4f9f6-c609-49ff-951e-07907ac1cec2	5fd90bc0-23c2-4127-b579-45d454887eee	2592000	f	900	t	f	0d92b695-e6a8-4438-8cb9-f1def22bded4	0	f	0	0	e435fff0-1799-4855-95c6-7e13216cae6b
+ba1a6f7d-badd-4ac5-9ce3-3a5dc0dd1d0b	60	300	300	\N	\N	\N	t	f	0	\N	poc-realm	0	\N	t	t	t	f	EXTERNAL	1800	36000	f	f	d3a1c55d-68b9-41f2-ad98-a8bcb669d6aa	1800	f	\N	f	f	f	f	0	1	30	6	HmacSHA1	totp	e3c72776-738f-4a50-8b65-15737aeb31cd	8b44a050-5ec9-4e52-b6a3-89fd59bdeb91	00f7b56a-1e4b-445a-a424-b7706190f506	fcb6b793-200e-492a-a09b-f3ea026f3a6a	903d0900-b5b6-4055-8075-957d04292a1b	2592000	t	900	t	f	e3935ad1-5899-48a5-be90-c4956388f55e	0	f	0	0	e8eb2cf0-e9ff-4e80-ae1f-3dca2cd64a9c
 \.
 
 
@@ -3118,6 +3117,10 @@ _browser_header.xFrameOptions	ba1a6f7d-badd-4ac5-9ce3-3a5dc0dd1d0b	SAMEORIGIN
 _browser_header.contentSecurityPolicy	ba1a6f7d-badd-4ac5-9ce3-3a5dc0dd1d0b	frame-src 'self'; frame-ancestors 'self'; object-src 'none';
 _browser_header.xXSSProtection	ba1a6f7d-badd-4ac5-9ce3-3a5dc0dd1d0b	1; mode=block
 _browser_header.strictTransportSecurity	ba1a6f7d-badd-4ac5-9ce3-3a5dc0dd1d0b	max-age=31536000; includeSubDomains
+actionTokenGeneratedByUserLifespan-verify-email	ba1a6f7d-badd-4ac5-9ce3-3a5dc0dd1d0b	
+actionTokenGeneratedByUserLifespan-idp-verify-account-via-email	ba1a6f7d-badd-4ac5-9ce3-3a5dc0dd1d0b	
+actionTokenGeneratedByUserLifespan-reset-credentials	ba1a6f7d-badd-4ac5-9ce3-3a5dc0dd1d0b	
+actionTokenGeneratedByUserLifespan-execute-actions	ba1a6f7d-badd-4ac5-9ce3-3a5dc0dd1d0b	
 \.
 
 
@@ -3359,7 +3362,7 @@ COPY public.user_consent_client_scope (user_consent_id, scope_id) FROM stdin;
 
 COPY public.user_entity (id, email, email_constraint, email_verified, enabled, federation_link, first_name, last_name, realm_id, username, created_timestamp, service_account_client_link, not_before) FROM stdin;
 733a0f8d-e2ac-4ef7-bfa4-0a017f3e73b1	\N	9523d5ab-07c0-4364-a993-9ebb20a862fd	f	t	\N	\N	\N	d86ec37e-5c02-4219-bb0d-99cb545457ff	admin	1661337657133	\N	0
-215dbd9f-19e6-446b-ae84-226fc1942282	andres.garcia@fundacionctic.org	andres.garcia@fundacionctic.org	f	t	\N	Andres	Garcia Mangas	ba1a6f7d-badd-4ac5-9ce3-3a5dc0dd1d0b	andres.garcia	1661337866403	\N	0
+328856d8-af88-4b67-979d-852ef2ab00f3	theuser@example.com	theuser@example.com	t	t	\N	User	User	ba1a6f7d-badd-4ac5-9ce3-3a5dc0dd1d0b	theuser	1661421150153	\N	0
 \.
 
 
@@ -3400,7 +3403,7 @@ COPY public.user_federation_provider (id, changed_sync_period, display_name, ful
 --
 
 COPY public.user_group_membership (group_id, user_id) FROM stdin;
-a3125c94-d207-4ca8-a0b9-160ca173792d	215dbd9f-19e6-446b-ae84-226fc1942282
+a3125c94-d207-4ca8-a0b9-160ca173792d	328856d8-af88-4b67-979d-852ef2ab00f3
 \.
 
 
@@ -3436,8 +3439,8 @@ c041354d-8bda-465e-93af-cafab43337e4	733a0f8d-e2ac-4ef7-bfa4-0a017f3e73b1
 00974d45-b847-4e7c-bf04-a3e6700eaa15	733a0f8d-e2ac-4ef7-bfa4-0a017f3e73b1
 33bb94d4-a7c3-40f2-9607-2d1204d99268	733a0f8d-e2ac-4ef7-bfa4-0a017f3e73b1
 ea48937f-7aaa-4650-a5f7-323c950737ee	733a0f8d-e2ac-4ef7-bfa4-0a017f3e73b1
-e8eb2cf0-e9ff-4e80-ae1f-3dca2cd64a9c	215dbd9f-19e6-446b-ae84-226fc1942282
-4cb40f78-fb1d-4f58-a692-596d237a6784	215dbd9f-19e6-446b-ae84-226fc1942282
+e8eb2cf0-e9ff-4e80-ae1f-3dca2cd64a9c	328856d8-af88-4b67-979d-852ef2ab00f3
+4cb40f78-fb1d-4f58-a692-596d237a6784	328856d8-af88-4b67-979d-852ef2ab00f3
 \.
 
 
