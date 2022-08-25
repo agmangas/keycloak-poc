@@ -2,7 +2,7 @@
 
 A minimal Keycloak proof-of-concept consisting of three components:
 
-- A non-production Keycloak deployment for Kubernetes.
+- A non-production Keycloak deployment for Kubernetes (minikube).
 - A NodeJS HTTP API that leverages the `keycloak-connect` package.
 - A Python example client that implements the _Resource Owner Password Flow_.
 
@@ -19,6 +19,14 @@ Then, run the start script. This will deploy a Compose stack with a PostgreSQL i
 ```
 ./start.sh
 ```
+
+Finally run the tunnel to enable access to the service:
+
+```
+minikube tunnel
+```
+
+The Keycloak administration dashboard will be available on `http://localhost:8080`.
 
 ## Run the Node API
 
