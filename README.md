@@ -26,7 +26,10 @@ Finally run the tunnel to enable access to the service:
 minikube tunnel
 ```
 
-The Keycloak administration dashboard will be available on `http://localhost:8080`.
+The Keycloak administration dashboard will be available on `http://localhost:8080`:
+
+* The default _admin_ username is `$KEYCLOAK_ADMIN` in `keycloak-config.yml`.
+* The default _admin_ password is `$KEYCLOAK_ADMIN_PASSWORD` in `secrets.env`.
 
 ## Run the Node API
 
